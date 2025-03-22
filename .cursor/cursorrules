@@ -1,0 +1,60 @@
+# Nextra Documentation Best Practices
+
+## Project Setup
+- Install required dependencies: next-themes, nextra, and nextra-theme-docs
+- Configure next.config.js with withNextra and proper theme options
+- Create theme.config.js in project root with default export configuration
+- Include appropriate build scripts in package.json
+
+## Content Organization
+- Organize documentation in the pages directory with logical structure
+- Use .mdx files instead of .md to enable React components
+- Create index.mdx in each directory as landing page
+- Group related content in subdirectories
+
+## Navigation Structure
+- Include _meta.json in each directory to define navigation
+- Design logical navigation hierarchy from general to specific topics
+- Use descriptive page titles in _meta.json
+- Order navigation items from most to least important
+
+## Styling and Theming
+- Configure theme settings in theme.config.js (logo, footer, colors)
+- Create styles/global.css for custom styling
+- Enable and test dark mode compatibility
+- Maintain consistent styling across all pages
+
+## Component Usage
+- Use Nextra built-in components (Callout, Tabs, Steps)
+- Create reusable custom components for repeated patterns
+- Always specify language for code blocks
+- Use TOC component for longer pages
+
+## Performance Optimization
+- Optimize images using Next.js Image component
+- Lazy load heavy components with dynamic imports
+- Minimize external dependencies
+- Reduce unnecessary JavaScript
+
+## Deployment Best Practices
+- Configure proper build scripts
+- Use Vercel for optimal Nextra deployment
+- Set up redirects for moved content
+- Enable proper caching headers
+
+## Documentation Standards
+- Follow consistent heading hierarchy (H1, H2, H3)
+- Include descriptive frontmatter with metadata
+- Maintain consistent voice and terminology
+- Add table of contents for longer pages
+
+## Internationalization
+- Structure content by locale directories when supporting multiple languages
+- Configure i18n in next.config.js for multi-language support
+- Maintain translation consistency across documents
+
+## SEO
+- Configure proper SEO metadata in theme.config.js and page frontmatter
+- Use descriptive link text instead of generic phrases
+- Include alt text for all images
+- Create descriptive URLs with proper slugs 
