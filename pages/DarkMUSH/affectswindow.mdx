@@ -1,0 +1,58 @@
+---
+title: Affects Window
+---
+
+# DarkMUSH Affects Window Documentation
+
+This plugin displays your active affects (spells, buffs, debuffs, etc.) in a dedicated mini-window, using animated GIFs.
+
+## Features
+
+* Displays active affects as animated icons.
+* Shows timers for timed affects, updating in real-time.
+* Customizable icon size (32x32 or 64x64).
+* Right-click menu for window management.
+* Recast support for disabled (fallen) affects via click or `spellup` command.
+* Debug mode for troubleshooting.
+
+## Commands
+
+| Command          | Description                                                         |
+|-------------------|---------------------------------------------------------------------|
+| `affects window debug` | Toggles debug mode on/off. (You won't need this unless you're coding)   |
+| `spellup`       | Attempts to recast all disabled (fallen) spells and skills.      |
+
+
+
+## Right-Click Menu
+
+Right-clicking on the Affects Window opens a context menu with the following options:
+
+* **Bring to Front:** Brings the Affects Window to the front of all other windows.
+* **Send to Back:** Sends the Affects Window behind other windows.
+* **Set images to small (32):** Sets the icon size to 32x32 pixels.
+* **Set images to large (64):** Sets the icon size to 64x64 pixels.
+* **Choose Spell (when clicked on an icon):**  Opens a listbox to select a different spell to associate with that button slot.  This allows customization of the quick-cast buttons.
+
+
+## Icon Functionality
+
+* **Active Affects:** Displayed as animated GIFs.  Timers are shown below the icon for timed affects.  The timer color changes (green, yellow, red) based on remaining time. Permanent affects have a "PERMA" timer.
+* **Disabled (Fallen) Affects:** Displayed as a static "down" version of the icon. Clicking on a disabled icon will attempt to recast the associated spell.
+* **Missing Icons:** If the plugin can't find the image files for an affect, it will display an error message (once).
+
+
+## Configuration and Customization
+
+* **Image Files:** Affect icons (GIF frames) should be placed in the `worlds/plugins/images/affects/` directory. Filenames should follow the pattern `affect_name_XXX.png`, where `XXX` is a three-digit frame number (e.g., `sanctuary_001.png`, `sanctuary_002.png`, etc.). A `_down.png` image is used for the disabled state (e.g., `sanctuary_down.png`).
+* **Button Customization:** The right-click menu on a button slot allows you to assign different spells to specific button locations. This effectively creates customizable quick-cast buttons within the Affects Window.
+* **Debug Mode:** Enabled/disabled with the `affects window debug` command. When enabled, debug messages are printed to the MUSHclient output window.
+
+## Troubleshooting
+
+* **Missing Icons:** Ensure the required image files are in the correct directory and have the correct filenames. Check for typos in the `affect_icons` table in the plugin script.
+* **Timers Not Updating:** Ensure that GMCP is enabled in your MUD client and that the game server is sending the necessary `comm.tick` messages.
+* **General Issues:** Enable debug mode (`affects window debug`) to see more detailed messages in the MUSHclient output window.  This can help diagnose problems.
+
+
+This documentation should help you understand and use the DarkMUSH Affects Window plugin. For further questions or to report bugs, please contact the plugin's author.
