@@ -1,0 +1,50 @@
+---
+title: Alias
+description: Dark Wizardry help file for ALIAS
+keywords: ["alias"]
+required_level: 0
+---
+
+# Alias
+
+Syntax:  alias \<list|show|set|edit|remove|clear\> \<keyword\>  
+
+ The alias system allows players to create shortcuts for commonly used  
+ commands. Aliases can include multiple lines and support wildcards.  
+
+ COMMANDS:  
+ alias list     - Displays all saved aliases.  
+ alias show \<keyword\>     - Shows the details of a specific alias.  
+ alias set \<keyword\>      - Creates a new alias with the given keyword.  
+ alias edit \<keyword\>     - Edits an existing alias.  
+ alias remove \<keyword\>   - Deletes an alias.  
+ alias clear              - Deletes all aliases.  
+
+ USAGE:  
+ alias set mm This will put you into the editor. Let's use  
+ c 'magic missile' $* as our command, and hit @ to exit.  
+ - Sets an alias mm to cast magic missile on a target.  
+ - Use mm demon lord to cast c 'magic missile' demon lord.  
+
+ Once an alias is set, you can use it by typing its keyword.  
+ mm demon    -\> Expands to: 228 c 'magic missile' demon  
+
+ WILDCARDS:  
+ $ - $ - Replaces with the one single word from the input.  
+ $$*      - Replaces with everything after the alias keyword.  
+
+ EXAMPLES:  
+ alias set heal, with the commands:  228c '$' $  
+ - Typing "heal Bob minor" expands to: 228Y c 'Bob' minor  
+ - Typing "heal self cure" expands to: 228 c 'self' cure  
+
+ alias set ooc, with the commands: 228 gossip $*  
+ - Typing "ooc Hello world" expands to: 228gossip Hello world  
+
+ alias set superkill, with the commands: 228bs $;trip $;garotte $  
+ - Typing "superkill demon!" expands to: 228bs demon;trip demon;garotte demon  
+
+ NOTES:  
+ - $$* captures multiple words as a single string.  
+ - $, $, $, etc. capture individual words from input.  
+ - Combining both allows flexible alias usage.

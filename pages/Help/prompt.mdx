@@ -1,0 +1,44 @@
+---
+title: Prompt
+description: Dark Wizardry help file for PROMPT
+keywords: ["prompt"]
+required_level: 0
+---
+
+# Prompt
+
+Syntax: prompt  
+Syntax: prompt all  
+Syntax: prompt show  
+Syntax: prompt \<%*\>  
+
+PROMPT without an argument will turn your prompt on or off.  
+PROMPT ALL will give you the standard "\<hits mana moves\>" prompt.  
+PROMPT SHOW will display your current prompt to you, in the code you input it with.  
+PROMPT \<%*\> where the %* are the various variables you may set yourself.  
+
+%h :  Display your current hits            $ $ : red / light red  
+%H :  Display your maximum hits            $ $ : green / light green  
+%m :  Display your current mana            $ $ : yellow / light yellow  
+%M :  Display your maximum mana            $ $ : blue / light blue  
+%v :  Display your current moves           $ $ : magenta / light magenta  
+%V :  Display your maximum moves           $ $ : cyan / light cyan  
+%x :  Display your current experience      $ $ : grey / white  
+%g :  Display your gold held               $ : random color  
+%a :  Display your alignment               $ $ : NO color  
+%A :  Display numeric alignment value  
+%e :  Display enemy name (if in combat)  
+%E :  Display enemy health percentage (if in combat)  
+%q :  Display quest timer or status (waiting, questing, or not on a quest)  
+%r :  Display the room name you are in  
+%z :  Display the area name you are in  
+%Bh:  Display your hp in a bar  
+%Bm:  Display your mana in a bar  
+%Bv:  Display your movement in a bar  
+%Bd:  Display your current dragon breath (DRAGON FORM ONLY)  
+%R :  Display the vnum you are in (IMMORTAL ONLY)  
+%c :  Display the OLC editor you are in (IMMORTAL ONLY)  
+%W :  Display if you are wizinvis (IMMORTAL ONLY)  
+
+Example: PROMPT \<%hhp %mm %vmv\>  
+    Will set your prompt to "\<10hp 100m 100mv\>"

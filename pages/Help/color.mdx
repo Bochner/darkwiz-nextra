@@ -1,0 +1,47 @@
+---
+title: Color
+description: Dark Wizardry help file for COLOR
+keywords: ["color"]
+required_level: 0
+---
+
+# Color
+
+Syntax: color \<defaults|list|set|toggle\> \<field #\> \<color\>  
+
+'defaults' will set your colors back in default.  'list' will show colors  
+currently set.  'toggle' wil toggle your colors ON or OFF.  
+
+With the 'set' option you can set your own color preferences.  
+It will work like this: color set \<#field\> \<color\>.  
+\<color\> must be one of:  
+    r R : red / light red  
+    g G : green / light green  
+    y Y : yellow / light yellow  
+    b B : blue / light blue  
+    m M : magenta / light magenta  
+    c C : cyan / light cyan  
+    w W : grey / white  
+    ?   : random  
+    d   : dark  
+
+Table for \<#field\>:  
+|field| description                    |field| description  
++-----+--------------------------------+-----+---------------------------------  
+|  0  | whisper                        | 15  | LOOK: objects on floor  
+|  1  | clan                           | 16  | LOOK: dark  
+|  2  | dream                          | 17  | SCAN: exits  
+|  3  | yell                           | 18  | SCAN: players  
+|  4  | gossip/shout                   | 19  | SCAN: mobs  
+|  5  | music                          | 20  | COMBAT: condition victim  
+|  6  | auction                        | 21  | COMBAT: deaths  
+|  7  | say                            | 22  | COMBAT: experience gain  
+|  8  | tell/reply                     | 23  | COMBAT: damage on you  
+|  9  | grouptell                      | 24  | COMBAT: damage to victim  
+| 10  | LOOK: players in room          | 25  | COMBAT: disarm  
+| 11  | LOOK: mobs in room             | 26  | additional info  
+| 12  | LOOK: room name                | 27  | chat  
+| 13  | LOOK: room exits               | 28  | vent  
+| 14  | LOOK: room description  
+
+SEE ALSO: COLORS

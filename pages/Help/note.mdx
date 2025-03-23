@@ -1,0 +1,46 @@
+---
+title: Note
+description: Dark Wizardry help file for NOTE, BOARD, NOTE, SYSTEM, BOARDS
+keywords: ["note", "board", "note", "system", "boards"]
+required_level: 0
+---
+
+# Note
+
+Syntax:  
+
+board [number|name]             Shows or changes board.  
+note                            Reads next note.  
+note + \<text\>                   Appends a line to the note  
+note -                          Remove last line  
+note (r)ead [number]            Reads a certain note.  
+note (d)elete \<number\>          Deletes/removes a note written by you.  
+note (l)ist [number]            Shows up to number notes.  
+note (t)o \<recipients\>          Sets recipients  
+note (s)ubject \<subject\>        Sets subject of note  
+note (v)iew/show                Views/shows note currently in progress  
+note (p)ost                     Posts the note  
+note (c)lear                    Clears a note you are currently writing  
+
+You can use '$$' as a synonym for note. So if you would like to post the note  
+currently in progress, you can just type: $  
+
+Instead of just one board, there are several, each with its special purpose.  
+
+Changing between the boards is accomplished using the BOARD command. BOARD  
+without any arguments gives you a list of all boards together with number of  
+unread message. To change, type BOARD \<number\> or BOARD \<name of the board\>.  
+
+To read next unread note, type NOTE. To read a note with a specified number,  
+type NOTE READ \<number\>. Typing NOTE while in a board with no unread notes  
+shifts you to the next board.  
+
+To see the list of the notes in the current board, type NOTE LIST. Typing  
+NOTE LIST \<number\> will list only \<number\> of the last notes in the area.  
+
+You can remove your own note by using NOTE DELETE \<number\>. Implementors may  
+delete other people's notes.   Purging happens automatically at bootup.  
+Purged notes are not deleted, but saved into a file.  
+
+To let only immortals see your note, address it to "imm". If you want to send  
+a note to a clan, address it to the clan its name.
