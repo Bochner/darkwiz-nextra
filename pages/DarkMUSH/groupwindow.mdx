@@ -1,0 +1,105 @@
+---
+title: Group window
+---
+
+# DarkMUSH Group Monitor Documentation
+
+This plugin provides a persistent visual display of your group members' status using details captured through GMCP.
+
+## Features
+
+* Real-time display of group member information (HP, Mana, Moves, etc.).
+* Customizable display options (font, colors, gauge styles).
+* Sorting options (by HP percentage or total damage).
+* Ability to show/hide individual members or all members.
+* Options to filter members based on location (same room or anywhere).
+* HP thresholds for visual alerts.
+* Compact mode for a more condensed view.
+
+## Commands
+
+| Command       | Description                                                                  |
+|---------------|------------------------------------------------------------------------------|
+| `groupon`     | Shows the group window.                                                         |
+| `groupoff`    | Hides the group window.                                                        |
+| `grouproom`   | Toggles between tracking group members in the same room or everywhere.     |
+| `groupsetroom` | Shows only group members currently in the same room as you.                 |
+| `groupsetall`  | Shows all group members, regardless of their location or hidden status.   |
+| `groupsetnone` | Hides all group members except yourself.                                    |
+| `showp <name>` | Shows a specific player in the group window.                                  |
+| `hidep <name>` | Hides a specific player from the group window.                                 |
+| `resetaard`    | Resets the plugin settings and window position to their default values.      |
+| `groupcompact`| Toggles the ultracompact mode, which condenses the information displayed for each group member. |
+
+
+## Right-Click Menu
+
+Right-clicking on the group window brings up a context menu with the following options:
+
+### General Options
+
+* **Ultracompact Mode:** Toggles the ultracompact display mode.
+* **Change Font:** Allows you to change the font and size of the text in the window.
+* **Include Self:** Toggles whether your own character's information is displayed.
+* **Same Room:** Toggles whether only characters in your current room are shown.
+* **All Others:** Shows all other group members.
+* **No Others:** Hides all other group members.
+* **Others In The Room Right Now:**  Shows only other group members currently in the same room.
+* **`<group member names>`:**  Individual toggles to show or hide specific group members.  A `+` next to the name indicates the member is currently being shown.
+* **Bring to Front:** Brings the group window to the front of all other windows.
+* **Send to Back:** Sends the group window behind other windows.
+* **Reset Defaults:** Resets the plugin's settings to their default values.
+
+### Configure Colors
+
+Allows customization of the colors used for the health, mana, moves, and alignment gauges.  You can set separate colors for the main gauge and the gauge border.
+
+
+### Gauge Style (Full Mode Only)
+
+* **No Gauges:** Displays only numerical values, no graphical gauges.
+* **Flat Gauges:** Displays flat, solid color gauges.
+* **3D Gauges:** Displays gauges with a 3D shaded effect.
+
+### Number Style
+
+* **Standard:** Displays raw numerical values (e.g., 1234/5678).
+* **Percentages:** Displays values as percentages (e.g., 75%).
+* **Standard+Percentages:** Displays both raw values and percentages.
+* **Overlaid on Gauges (Full Mode Only):** Displays the numerical values directly on top of the gauges.
+
+### HP Thresholds
+
+Allows you to set two HP percentage thresholds. When a group member's HP falls below these thresholds, the HP bar will change color.
+
+* **Activate:** Toggles the threshold on or off.
+* **Set Percent:** Sets the percentage for the threshold.
+* **Set Gauge Color:** Sets the color of the HP bar when the threshold is triggered.
+
+### Sort By
+
+* **% Damage:** Sorts group members by percentage of HP lost.
+* **Total Damage:** Sorts group members by total HP lost.
+* **Players On Quests Go Last:** Sorts players currently on quests to the bottom of the list.
+
+### Show Info (Full Mode Only)
+Allows you to choose which information to display in the group window, and includes toggles for:
+* **Health:** Displays the health information.
+* **Mana:** Displays the mana information.
+* **Moves:** Displays the moves information.
+* **Quest Time:** Displays the remaining quest time.
+* **TNL:** Displays the time to next level.
+
+## Show Enemies
+A toggle to show enemies in the group window.
+
+## Troubleshooting
+
+If the group window doesn't appear or update correctly, try the following:
+
+* Ensure GMCP is enabled in your MUD client and on the game server.
+* Use the `resetaard` command to reset the plugin settings.
+* Check the Mudlet logs for any error messages.
+
+
+This documentation covers the main features and functionality of the DarkMUSH Group Monitor plugin. If you encounter any issues or have further questions, consult the plugin's author or the Aardwolf community forums.
