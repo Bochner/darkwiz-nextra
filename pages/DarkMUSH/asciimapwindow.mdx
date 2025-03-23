@@ -1,0 +1,73 @@
+---
+title: Ascii Map Window
+---
+
+# DarkMUSH ASCII Mapper Documentation
+
+This plugin displays an ASCII map in a dedicated mini-window. It captures map data sent by the game server and renders it with colors and formatting.
+
+## Features
+
+* Displays ASCII maps in a resizable mini-window.
+* Supports colors and text formatting (bold).
+* Customizable font face and size.
+* Option to toggle the map data's visibility in the main output window.
+
+## Commands
+
+| Command              | Description                                                      |
+|-----------------------|------------------------------------------------------------------|
+| `set ascii font`     | Opens a font selection dialog to change the map's font.           |
+| `ascii help`         | Displays a help message (currently a placeholder).               |
+| `ascii toggle output`| Toggles whether the raw map data is shown in the main output window.|
+
+
+
+## Usage
+
+The plugin works by capturing map data enclosed between special markers: `{map_start}` and `{map_end}`.  Anything sent between these markers is treated as map data. Each line of the map data is captured and displayed in the mini-window.
+
+The plugin handles colors and bold formatting based on the styles sent by the game server.
+
+## Configuration
+
+* **Font:** Use the `set ascii font` command to choose the font face and size for the map display. The mini-window automatically resizes to fit the chosen font.  The recommended font is *Fira Code*.
+* **Output Toggling:** The `ascii toggle output` command controls whether the raw ASCII map data (between `{map_start}` and `{map_end}`) is displayed in the main Mudlet output window. This can be useful for debugging or if you prefer to see the raw data.
+
+##  Example Map Data
+
+The game server should send map data in the following format:
+
+
+\{map_start\}  
+.......  
+..#...#..  
+.......  
+\{map_end\}
+
+
+
+Where:
+
+* `{map_start}` and `{map_end}` mark the beginning and end of the map data.
+* `.` represents an empty space.
+* `#` represents a wall or obstacle.
+
+The server can include ANSI color codes and other formatting within the map data. The plugin will interpret these codes and display the map accordingly.
+
+
+## Troubleshooting
+
+* **Map Not Displaying:** Ensure the server is sending the map data correctly, including the `{map_start}` and `{map_end}` markers. Check the Mudlet console for any error messages.
+* **Incorrect Formatting:** Verify that the ANSI color codes and other formatting in the map data are valid.
+* **Font Issues:** If the map characters are not displaying correctly, try changing the font using the `set ascii font` command. The recommended font is *Fixedsys Excelsior* or *Fira Code*, which support many extended ASCII characters often used in maps. *Remember to download and install the font on your operating system*.
+
+I recommend using Fixedsys Excelsior, found here  
+https://font.download/font/fixedsys-excelsior-301
+ 
+or FiraCode, found here  
+https://fonts.google.com/specimen/Fira+Code
+
+
+
+This documentation provides an overview of the DarkMUSH ASCII Mapper plugin. If you encounter any issues or have further questions, consult the plugin's author or the relevant game community forums.
