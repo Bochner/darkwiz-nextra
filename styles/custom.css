@@ -1,0 +1,928 @@
+/* Additional custom styling for Dark Wizardry theme */
+
+/* Force dark theme application-wide */
+:root {
+  color-scheme: dark !important;
+}
+
+html {
+  background-color: #000 !important;
+  color: #e4e4e7 !important;
+}
+
+html:not(.dark) {
+  filter: invert(0%) !important; /* Prevent light mode switching */
+}
+
+/* Target header parent elements and outer containers */
+html, body, div, main, header, footer, nav, aside,
+.nextra-container, .nextra-nav-container-outer,
+.nextra-sidebar-container-menu, 
+div[data-nextra-nav],
+header > div, 
+div[data-nextra-navbar],
+.nextra-nav-container-blur > nav,
+header > nav,
+.nextra-nav-container > nav,
+main > div {
+  background-color: #000 !important;
+}
+
+/* Force black background on header and footer */
+header, 
+.nextra-nav-container,
+.nextra-nav-container-blur,
+footer,
+.nextra-footer,
+nav {
+  background-color: #000 !important;
+  border-color: #2a2a2a !important;
+}
+
+/* Fix dark mode toggle button */
+button[aria-label="Toggle Dark Mode"],
+button[aria-label="Toggle Light Mode"],
+.nx-p-2.nx-rounded-md {
+  color: #e4e4e7 !important;
+  background-color: transparent !important;
+}
+
+button[aria-label="Toggle Dark Mode"]:hover,
+button[aria-label="Toggle Light Mode"]:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Logo alignment fix */
+.nextra-nav-container-blur a,
+.nextra-nav-container a, 
+header a, 
+a.nx-flex.nx-items-center {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+}
+
+.nextra-nav-container-blur a > *,
+.nextra-nav-container a > *, 
+header a > *, 
+a.nx-flex.nx-items-center > * {
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+.nextra-nav-container-blur svg,
+.nextra-nav-container svg,
+header svg {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Hide About and Contact links in the header */
+.nextra-nav-container a[href="/about"],
+.nextra-nav-container a[href^="/contact"],
+header a[href="/about"],
+header a[href^="/contact"],
+.nextra-nav-container-blur a[href="/about"],
+.nextra-nav-container-blur a[href^="/contact"],
+nav a[href="/about"],
+nav a[href^="/contact"],
+a.nx-text-primary-600[href="/about"],
+a.nx-text-primary-600[href^="/contact"],
+.nx-flex.nx-gap-2[href="/about"],
+.nx-flex.nx-gap-2[href^="/contact"] {
+  display: none !important;
+}
+
+/* Override any light theme variables */
+:root:not(.dark-theme) {
+  --background: #000 !important;
+  --foreground: #e4e4e7 !important;
+  --card: #151515 !important;
+  --card-foreground: #e4e4e7 !important;
+  --popover: #151515 !important;
+  --popover-foreground: #e4e4e7 !important;
+  --primary: #e4e4e7 !important;
+  --primary-foreground: #151515 !important;
+  --secondary: #2a2a2a !important;
+  --secondary-foreground: #e4e4e7 !important;
+  --muted: #2a2a2a !important;
+  --muted-foreground: #a1a1aa !important;
+  --accent: #2a2a2a !important;
+  --accent-foreground: #e4e4e7 !important;
+  --destructive: #991b1b !important;
+  --destructive-foreground: #e4e4e7 !important;
+  --border: #2a2a2a !important;
+  --input: #2a2a2a !important;
+  --ring: #a1a1aa !important;
+}
+
+/* Removing all feedback-related styles */
+
+/* Code highlighting */
+.nextra-code-block {
+  background-color: #151515 !important;
+  border: 1px solid #2a2a2a !important;
+}
+
+.nextra-code-block pre {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* Tooltips */
+.nextra-tooltip {
+  background-color: #151515 !important;
+  border: 1px solid #2a2a2a !important;
+  color: #e4e4e7 !important;
+}
+
+/* Modal elements */
+.nextra-modal {
+  background-color: #151515 !important;
+  border: 1px solid #2a2a2a !important;
+}
+
+.nextra-modal-content {
+  background-color: #151515 !important;
+  color: #e4e4e7 !important;
+}
+
+.nextra-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Callouts and admonitions */
+.nextra-callout {
+  background-color: #151515 !important;
+  border-color: #2a2a2a !important;
+  color: #e4e4e7 !important;
+}
+
+/* Tabs component */
+.nextra-tabs {
+  background-color: #151515 !important;
+  border-color: #2a2a2a !important;
+}
+
+.nextra-tab-active {
+  background-color: #202020 !important;
+  color: #e4e4e7 !important;
+}
+
+/* Card components */
+.nextra-card {
+  background-color: #151515 !important;
+  border-color: #2a2a2a !important;
+  color: #e4e4e7 !important;
+}
+
+.nextra-card:hover {
+  background-color: #202020 !important;
+  border-color: #3a3a3a !important;
+}
+
+/* Dark wizardry specific styling */
+.dark-wizardry-header {
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+/* Input elements */
+input, select, textarea {
+  background-color: #151515 !important;
+  border-color: #2a2a2a !important;
+  color: #e4e4e7 !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #a855f7 !important;
+  outline-color: #a855f7 !important;
+}
+
+/* Button elements - but with exceptions for specific buttons */
+button:not([aria-label="Toggle Dark Mode"]):not([aria-label="Toggle Light Mode"]):not(.nextra-sidebar-toggle):not(.nextra-menu-desktop button) {
+  background-color: #151515 !important;
+  color: #e4e4e7 !important;
+  border-color: #2a2a2a !important;
+}
+
+button:not([aria-label="Toggle Dark Mode"]):not([aria-label="Toggle Light Mode"]):not(.nextra-sidebar-toggle):not(.nextra-menu-desktop button):hover {
+  background-color: #202020 !important;
+}
+
+/* Theme switch button */
+.nextra-theme-switch {
+  background-color: #151515 !important;
+  border: 1px solid #2a2a2a !important;
+}
+
+.nextra-theme-switch button {
+  color: #e4e4e7 !important;
+}
+
+.nextra-theme-switch button[aria-checked="true"] {
+  background-color: #202020 !important;
+  color: #e4e4e7 !important;
+}
+
+/* ====== Additional fixes for specific elements ====== */
+
+/* Specific targeting of theme toggle buttons */
+button[aria-label="Toggle Dark Mode"],
+button[aria-label="Toggle Light Mode"] {
+  background-color: transparent !important;
+  color: #e4e4e7 !important;
+}
+
+/* Target the theme switch popover panel */
+div[role="menu"][aria-labelledby],
+div[data-headlessui-state*="open"] {
+  background-color: #151515 !important;
+  border: 1px solid #2a2a2a !important;
+}
+
+div[role="menu"] button {
+  background-color: #151515 !important;
+  color: #e4e4e7 !important;
+}
+
+div[role="menu"] button:hover {
+  background-color: #202020 !important;
+}
+
+div[role="menu"] button[aria-checked="true"] {
+  background-color: #202020 !important;
+  color: #e4e4e7 !important;
+}
+
+/* Additional catch-all selectors for theme elements */
+.nx-bg-primary-50, 
+.nx-bg-primary-100,
+.nx-bg-primary-200 {
+  background-color: #151515 !important;
+}
+
+.nx-text-primary-600,
+.nx-text-primary-700,
+.nx-text-primary-800 {
+  color: #e4e4e7 !important;
+}
+
+/* Force pure black backgrounds and consistent styling */
+.dark .nextra-container,
+.dark .nextra-sidebar-container,
+.dark .nextra-scrollbar,
+.dark footer,
+.dark nav,
+.dark header,
+.dark aside,
+.dark main,
+.dark .nx-sticky,
+.dark .nextra-nav-container,
+.dark .nextra-nav-container-blur {
+  background-color: #000 !important;
+}
+
+/* Target specific Tailwind classes used in the header */
+.nx-sticky,
+.nx-top-0,
+.nx-z-20,
+.nx-bg-white,
+.nx-bg-transparent,
+.nx-bg-opacity-\[\.85\],
+.nx-bg-opacity-85,
+.dark .nx-bg-dark,
+.dark .nx-bg-opacity-\[\.85\],
+.dark .nx-bg-opacity-85,
+.nx-backdrop-blur,
+.nx-backdrop-saturate-\[1\.8\],
+.dark .nx-border-neutral-800,
+.dark .nx-border-gray-800,
+.dark .nx-bg-dark .nx-border-neutral-800,
+.nx-transition-colors,
+.nextra-nav-container-blur::before,
+.nextra-nav-container-blur::after,
+.nextra-nav-container::before,
+.nextra-nav-container::after,
+header::before,
+header::after {
+  background-color: #000 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-color: #2a2a2a !important;
+}
+
+/* Fix for pseudo-elements and backgrounds */
+header::before,
+header::after,
+nav::before,
+nav::after,
+.nextra-nav-container::before,
+.nextra-nav-container::after,
+.nextra-nav-container-blur::before,
+.nextra-nav-container-blur::after {
+  background-color: #000 !important;
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: -1 !important;
+}
+
+/* Critical fixes for backdrop blur and nav containers */
+.nextra-nav-container,
+.nextra-nav-container-blur {
+  background-color: #000 !important;
+  background-image: none !important;
+  background: #000 !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Comprehensive element targeting */
+html body div[data-nextra-hide-sidebar] div[class*='nx-w-full nx-bg-white dark:nx-bg-dark'],
+html body div[data-nextra-hide-sidebar] div[class*='nx-fixed nx-top-0'],
+html body div[data-nextra-hide-sidebar] header,
+html body div[data-nextra-hide-sidebar] div[class*='nx-sticky nx-top-0'] {
+  background-color: #000 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Improved text readability */
+.nextra-content ul,
+.nextra-content ol {
+  margin-left: 1rem !important;
+}
+
+.nextra-content ul li {
+  color: #e4e4e7 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Better bullet points */
+.nextra-content ul {
+  list-style-type: none !important;
+}
+
+.nextra-content ul li::before {
+  content: '•' !important;
+  color: #a855f7 !important;
+  display: inline-block !important;
+  width: 1em !important;
+  margin-left: -1.5em !important;
+  margin-right: 0.5em !important;
+  font-size: 1.2em !important;
+  font-weight: bold !important;
+}
+
+/* Better highlighted text */
+.nextra-content strong,
+.nextra-content b {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Better links */
+.nextra-content a {
+  color: #a855f7 !important;
+  text-decoration: underline !important;
+}
+
+.nextra-content a:hover {
+  color: #c084fc !important;
+  text-decoration: underline !important;
+}
+
+/* Highlighted text in tables and code blocks */
+.nextra-content table strong,
+.nextra-content pre strong,
+.nextra-content code strong {
+  color: #d8b4fe !important;
+}
+
+/* Enhanced bullet point styling for better visibility */
+.nextra-content ul li::marker {
+  color: #a855f7 !important;
+}
+
+/* List item emphasis */
+.nextra-content li em {
+  color: #d8b4fe !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+}
+
+/* Ensure list items are clearly visible with proper spacing */
+.nextra-content ul li, 
+.nextra-content ol li {
+  margin-bottom: 0.75rem !important;
+  line-height: 1.6 !important;
+  position: relative !important;
+}
+
+/* Additional styling for first words or emphasized parts in list items */
+.nextra-content li strong:first-child,
+.nextra-content li b:first-child {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Style headers in list items differently */
+.nextra-content li > strong,
+.nextra-content li > b {
+  display: inline-block !important;
+  margin-right: 0.25rem !important;
+}
+
+/* Enhanced active item in sidebar navigation */
+.nextra-sidebar a.active,
+.nextra-sidebar-container a.active,
+.nx-text-primary-600[aria-current="page"],
+.nx-font-medium[aria-current="page"],
+a[aria-current="page"],
+li a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600,
+.nextra-menu-desktop li > a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors,
+a.nx-font-medium.nx-text-primary-600,
+a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors.nx-text-primary-600,
+li.nx-mt-1 > a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600,
+aside a.nx-text-primary-600,
+.nx-text-primary-600:not(.nextra-content .nx-text-primary-600),
+nav a.nx-flex.nx-gap-1.nx-py-1 {
+  background-color: rgba(168, 85, 247, 0.2) !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  border-left: 2px solid #a855f7 !important;
+}
+
+.nextra-sidebar a.active:hover,
+.nextra-sidebar-container a.active:hover,
+.nx-text-primary-600[aria-current="page"]:hover,
+.nx-font-medium[aria-current="page"]:hover,
+a[aria-current="page"]:hover,
+li a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600:hover,
+a.nx-font-medium.nx-text-primary-600:hover,
+a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors.nx-text-primary-600:hover,
+.nx-text-primary-600:hover,
+nav a.nx-flex.nx-gap-1.nx-py-1:hover {
+  background-color: rgba(168, 85, 247, 0.3) !important;
+}
+
+/* Only apply text color for non-active items */
+li:not(.active) > a:not(.active) > .nx-text-primary-600,
+li:not(.active) > a:not(.active) > .nx-text-primary-700,
+li:not(.active) > a:not(.active) > .nx-text-primary-800,
+span:not(.active) > .nx-text-primary-600 {
+  color: #e4e4e7 !important;
+}
+
+/* Standard link styling for content - single definition */
+.nextra-content a {
+  color: #a855f7 !important;
+  text-decoration: underline !important;
+}
+
+.nextra-content a:hover {
+  color: #c084fc !important;
+  text-decoration: underline !important;
+}
+
+/* Remove any conflicting link styles */
+.nextra-content a strong, 
+.nextra-content strong a,
+.nextra-content a b,
+.nextra-content b a,
+.nextra-content a em,
+.nextra-content em a,
+.nextra-content a code,
+.nextra-content code a {
+  color: #a855f7 !important;
+  text-decoration: underline !important;
+}
+
+/* Make sure main content links don't get the navigation styling */
+main .nextra-content a,
+article a,
+.nextra-content .nx-text-primary-600,
+.nextra-content a.nx-text-primary-600 {
+  background-color: transparent !important;
+  border-left: none !important;
+  padding-left: 0 !important;
+  color: #a855f7 !important;
+  text-decoration: underline !important;
+  font-weight: normal !important;
+}
+
+main .nextra-content a:hover,
+article a:hover,
+.nextra-content .nx-text-primary-600:hover,
+.nextra-content a.nx-text-primary-600:hover {
+  color: #c084fc !important;
+  background-color: transparent !important;
+  border-left: none !important;
+}
+
+/* Tables - improved readability */
+.nextra-content table {
+  border-color: #2a2a2a !important;
+  border-collapse: collapse !important;
+  width: 100% !important;
+  margin: 1.5rem 0 !important;
+}
+
+.nextra-content th {
+  background-color: #151515 !important;
+  color: #ffffff !important; /* Brighter text for headers */
+  border-color: #2a2a2a !important;
+  font-weight: 600 !important;
+  padding: 0.75rem 1rem !important;
+  text-align: left !important;
+}
+
+.nextra-content td {
+  background-color: #000 !important;
+  color: #ffffff !important; /* Much brighter text for better readability */
+  border-color: #2a2a2a !important;
+  padding: 0.75rem 1rem !important;
+  font-weight: 400 !important;
+}
+
+/* Table row hover effect */
+.nextra-content tr:hover td {
+  background-color: #0a0a0a !important;
+}
+
+/* Alternating row colors for better readability */
+.nextra-content tr:nth-child(even) td {
+  background-color: #050505 !important;
+}
+
+.nextra-content tr:nth-child(even):hover td {
+  background-color: #0a0a0a !important;
+}
+
+/* Force table text to be bright */
+table td, 
+.nextra-content table td, 
+.nextra-content tbody td, 
+.dark .nextra-content table td {
+  color: #ffffff !important;
+}
+
+/* Better bullet points spacing - more aggressive */
+.nextra-content ul li, 
+.nextra-content ol li {
+  margin-bottom: 0.25rem !important; /* Further reduced from 0.4rem */
+  line-height: 1.4 !important; /* Further reduced from 1.5 */
+  position: relative !important;
+}
+
+.nextra-content ul {
+  margin-top: 0.4rem !important;
+  margin-bottom: 0.4rem !important;
+}
+
+/* Adjust bullet point position */
+.nextra-content ul li::before {
+  margin-left: -1.3em !important;
+  margin-right: 0.4em !important;
+}
+
+/* More compact lists */
+.nextra-content ol,
+.nextra-content ul {
+  padding-left: 1.5rem !important;
+}
+
+/* Enhanced active item in sidebar navigation */
+.nextra-sidebar a.active,
+.nextra-sidebar-container a.active,
+.nx-text-primary-600[aria-current="page"],
+.nx-font-medium[aria-current="page"],
+a[aria-current="page"],
+li a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600,
+.nextra-menu-desktop li > a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors,
+a.nx-font-medium.nx-text-primary-600,
+a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors.nx-text-primary-600,
+li.nx-mt-1 > a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600,
+aside a.nx-text-primary-600,
+.nx-text-primary-600:not(.nextra-content .nx-text-primary-600),
+nav a.nx-flex.nx-gap-1.nx-py-1 {
+  background-color: rgba(168, 85, 247, 0.2) !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  border-left: 2px solid #a855f7 !important;
+}
+
+.nextra-sidebar a.active:hover,
+.nextra-sidebar-container a.active:hover,
+.nx-text-primary-600[aria-current="page"]:hover,
+.nx-font-medium[aria-current="page"]:hover,
+a[aria-current="page"]:hover,
+li a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600:hover,
+a.nx-font-medium.nx-text-primary-600:hover,
+a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors.nx-text-primary-600:hover,
+.nx-text-primary-600:hover,
+nav a.nx-flex.nx-gap-1.nx-py-1:hover {
+  background-color: rgba(168, 85, 247, 0.3) !important;
+}
+
+/* Only apply text color for non-active items */
+li:not(.active) > a:not(.active) > .nx-text-primary-600,
+li:not(.active) > a:not(.active) > .nx-text-primary-700,
+li:not(.active) > a:not(.active) > .nx-text-primary-800,
+span:not(.active) > .nx-text-primary-600 {
+  color: #e4e4e7 !important;
+}
+
+/* Standard link styling for content - single definition */
+.nextra-content a {
+  color: #a855f7 !important;
+  text-decoration: underline !important;
+}
+
+.nextra-content a:hover {
+  color: #c084fc !important;
+  text-decoration: underline !important;
+}
+
+/* Remove any conflicting link styles */
+.nextra-content a strong, 
+.nextra-content strong a,
+.nextra-content a b,
+.nextra-content b a,
+.nextra-content a em,
+.nextra-content em a,
+.nextra-content a code,
+.nextra-content code a {
+  color: #a855f7 !important;
+  text-decoration: underline !important;
+}
+
+/* Make sure main content links don't get the navigation styling */
+main .nextra-content a,
+article a,
+.nextra-content .nx-text-primary-600,
+.nextra-content a.nx-text-primary-600 {
+  background-color: transparent !important;
+  border-left: none !important;
+  padding-left: 0 !important;
+  color: #a855f7 !important;
+  text-decoration: underline !important;
+  font-weight: normal !important;
+}
+
+main .nextra-content a:hover,
+article a:hover,
+.nextra-content .nx-text-primary-600:hover,
+.nextra-content a.nx-text-primary-600:hover {
+  color: #c084fc !important;
+  background-color: transparent !important;
+  border-left: none !important;
+}
+
+/* Tables - improved readability */
+.nextra-content table {
+  border-color: #2a2a2a !important;
+  border-collapse: collapse !important;
+  width: 100% !important;
+  margin: 1.5rem 0 !important;
+}
+
+.nextra-content th {
+  background-color: #151515 !important;
+  color: #ffffff !important; /* Brighter text for headers */
+  border-color: #2a2a2a !important;
+  font-weight: 600 !important;
+  padding: 0.75rem 1rem !important;
+  text-align: left !important;
+}
+
+.nextra-content td {
+  background-color: #000 !important;
+  color: #ffffff !important; /* Much brighter text for better readability */
+  border-color: #2a2a2a !important;
+  padding: 0.75rem 1rem !important;
+  font-weight: 400 !important;
+}
+
+/* Table row hover effect */
+.nextra-content tr:hover td {
+  background-color: #0a0a0a !important;
+}
+
+/* Alternating row colors for better readability */
+.nextra-content tr:nth-child(even) td {
+  background-color: #050505 !important;
+}
+
+.nextra-content tr:nth-child(even):hover td {
+  background-color: #0a0a0a !important;
+}
+
+/* Force table text to be bright */
+table td, 
+.nextra-content table td, 
+.nextra-content tbody td, 
+.dark .nextra-content table td {
+  color: #ffffff !important;
+}
+
+/* Better bullet points spacing - more aggressive */
+.nextra-content ul li, 
+.nextra-content ol li {
+  margin-bottom: 0.25rem !important; /* Further reduced from 0.4rem */
+  line-height: 1.4 !important; /* Further reduced from 1.5 */
+  position: relative !important;
+}
+
+.nextra-content ul {
+  margin-top: 0.4rem !important;
+  margin-bottom: 0.4rem !important;
+}
+
+/* Adjust bullet point position */
+.nextra-content ul li::before {
+  margin-left: -1.3em !important;
+  margin-right: 0.4em !important;
+}
+
+/* More compact lists */
+.nextra-content ol,
+.nextra-content ul {
+  padding-left: 1.5rem !important;
+}
+
+/* Enhanced active item in sidebar navigation */
+.nextra-sidebar a.active,
+.nextra-sidebar-container a.active,
+.nx-text-primary-600[aria-current="page"],
+.nx-font-medium[aria-current="page"],
+a[aria-current="page"],
+li a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600,
+.nextra-menu-desktop li > a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors,
+a.nx-font-medium.nx-text-primary-600,
+a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors.nx-text-primary-600,
+li.nx-mt-1 > a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600,
+aside a.nx-text-primary-600,
+.nx-text-primary-600:not(.nextra-content .nx-text-primary-600),
+nav a.nx-flex.nx-gap-1.nx-py-1 {
+  background-color: rgba(168, 85, 247, 0.2) !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  border-left: 2px solid #a855f7 !important;
+}
+
+.nextra-sidebar a.active:hover,
+.nextra-sidebar-container a.active:hover,
+.nx-text-primary-600[aria-current="page"]:hover,
+.nx-font-medium[aria-current="page"]:hover,
+a[aria-current="page"]:hover,
+li a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600:hover,
+a.nx-font-medium.nx-text-primary-600:hover,
+a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors.nx-text-primary-600:hover,
+.nx-text-primary-600:hover,
+nav a.nx-flex.nx-gap-1.nx-py-1:hover {
+  background-color: rgba(168, 85, 247, 0.3) !important;
+}
+
+/* Only apply text color for non-active items */
+li:not(.active) > a:not(.active) > .nx-text-primary-600,
+li:not(.active) > a:not(.active) > .nx-text-primary-700,
+li:not(.active) > a:not(.active) > .nx-text-primary-800,
+span:not(.active) > .nx-text-primary-600 {
+  color: #e4e4e7 !important;
+}
+
+/* Standard link styling for content - single definition */
+.nextra-content a {
+  color: #a855f7 !important;
+  text-decoration: underline !important;
+}
+
+.nextra-content a:hover {
+  color: #c084fc !important;
+  text-decoration: underline !important;
+}
+
+/* Remove any conflicting link styles */
+.nextra-content a strong, 
+.nextra-content strong a,
+.nextra-content a b,
+.nextra-content b a,
+.nextra-content a em,
+.nextra-content em a,
+.nextra-content a code,
+.nextra-content code a {
+  color: #a855f7 !important;
+  text-decoration: underline !important;
+}
+
+/* Make sure main content links don't get the navigation styling */
+main .nextra-content a,
+article a,
+.nextra-content .nx-text-primary-600,
+.nextra-content a.nx-text-primary-600 {
+  background-color: transparent !important;
+  border-left: none !important;
+  padding-left: 0 !important;
+  color: #a855f7 !important;
+  text-decoration: underline !important;
+  font-weight: normal !important;
+}
+
+main .nextra-content a:hover,
+article a:hover,
+.nextra-content .nx-text-primary-600:hover,
+.nextra-content a.nx-text-primary-600:hover {
+  color: #c084fc !important;
+  background-color: transparent !important;
+  border-left: none !important;
+}
+
+/* Tables - improved readability */
+.nextra-content table {
+  border-color: #2a2a2a !important;
+  border-collapse: collapse !important;
+  width: 100% !important;
+  margin: 1.5rem 0 !important;
+}
+
+.nextra-content th {
+  background-color: #151515 !important;
+  color: #ffffff !important; /* Brighter text for headers */
+  border-color: #2a2a2a !important;
+  font-weight: 600 !important;
+  padding: 0.75rem 1rem !important;
+  text-align: left !important;
+}
+
+.nextra-content td {
+  background-color: #000 !important;
+  color: #ffffff !important; /* Much brighter text for better readability */
+  border-color: #2a2a2a !important;
+  padding: 0.75rem 1rem !important;
+  font-weight: 400 !important;
+}
+
+/* Table row hover effect */
+.nextra-content tr:hover td {
+  background-color: #0a0a0a !important;
+}
+
+/* Alternating row colors for better readability */
+.nextra-content tr:nth-child(even) td {
+  background-color: #050505 !important;
+}
+
+.nextra-content tr:nth-child(even):hover td {
+  background-color: #0a0a0a !important;
+}
+
+/* Force table text to be bright */
+table td, 
+.nextra-content table td, 
+.nextra-content tbody td, 
+.dark .nextra-content table td {
+  color: #ffffff !important;
+}
+
+/* Better bullet points spacing - more aggressive */
+.nextra-content ul li, 
+.nextra-content ol li {
+  margin-bottom: 0.25rem !important; /* Further reduced from 0.4rem */
+  line-height: 1.4 !important; /* Further reduced from 1.5 */
+  position: relative !important;
+}
+
+.nextra-content ul {
+  margin-top: 0.4rem !important;
+  margin-bottom: 0.4rem !important;
+}
+
+/* Adjust bullet point position */
+.nextra-content ul li::before {
+  margin-left: -1.3em !important;
+  margin-right: 0.4em !important;
+}
+
+/* More compact lists */
+.nextra-content ol,
+.nextra-content ul {
+  padding-left: 1.5rem !important;
+}
+
+/* Hide About and Contact links in the header */
+.nextra-nav-container a[href="/about"],
+.nextra-nav-container a[href^="/contact"],
+header a[href="/about"],
+header a[href^="/contact"],
+.nextra-nav-container-blur a[href="/about"],
+.nextra-nav-container-blur a[href^="/contact"],
+nav a[href="/about"],
+nav a[href^="/contact"] {
+  display: none !important;
+} 
