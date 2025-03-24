@@ -1,0 +1,12 @@
+{
+  "*": {
+    "theme": {
+      "breadcrumb": true,
+      "toc": true,
+      "pagination": true,
+      "sidebar": true,
+      "footer": true
+    }
+  },
+  "index": "Overview"
+}

@@ -3,7 +3,9 @@
     "title": "Introduction"
   },
   "races": "Races",
-  "Help": "Help Documentation",
+  "help": {
+    "title": "Help Documentation"
+  },
   "DarkMUSH": "DarkMUSH Client",
   "about": {
     "title": "About"
