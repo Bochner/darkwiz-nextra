@@ -704,9 +704,9 @@ const config: DocsThemeConfig = {
     extraContent: null
   },
   search: {
-    placeholder: 'Search the entire documentation...',
+    placeholder: 'Search documentation...',
     emptyResult: 'No results found. Try a different search term.',
-    loading: 'Searching all documentation...',
+    loading: 'Searching documentation...',
     error: 'An error occurred while searching. Please try again.'
   },
   direction: 'ltr',
