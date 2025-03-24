@@ -78,22 +78,6 @@ header svg {
   margin-bottom: 0 !important;
 }
 
-/* Hide About and Contact links in the header */
-.nextra-nav-container a[href="/about"],
-.nextra-nav-container a[href^="/contact"],
-header a[href="/about"],
-header a[href^="/contact"],
-.nextra-nav-container-blur a[href="/about"],
-.nextra-nav-container-blur a[href^="/contact"],
-nav a[href="/about"],
-nav a[href^="/contact"],
-a.nx-text-primary-600[href="/about"],
-a.nx-text-primary-600[href^="/contact"],
-.nx-flex.nx-gap-2[href="/about"],
-.nx-flex.nx-gap-2[href^="/contact"] {
-  display: none !important;
-}
-
 /* Override any light theme variables */
 :root:not(.dark-theme) {
   --background: #000 !important;
@@ -438,374 +422,45 @@ html body div[data-nextra-hide-sidebar] div[class*='nx-sticky nx-top-0'] {
   margin-right: 0.25rem !important;
 }
 
-/* Enhanced active item in sidebar navigation */
+/* Enhanced active item styling */
 .nextra-sidebar a.active,
-.nextra-sidebar-container a.active,
-.nx-text-primary-600[aria-current="page"],
-.nx-font-medium[aria-current="page"],
-a[aria-current="page"],
-li a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600,
-.nextra-menu-desktop li > a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors,
-a.nx-font-medium.nx-text-primary-600,
-a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors.nx-text-primary-600,
-li.nx-mt-1 > a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600,
-aside a.nx-text-primary-600,
-.nx-text-primary-600:not(.nextra-content .nx-text-primary-600),
-nav a.nx-flex.nx-gap-1.nx-py-1 {
+.nextra-sidebar-container a.active {
   background-color: rgba(168, 85, 247, 0.2) !important;
   color: #ffffff !important;
   font-weight: 500 !important;
   border-left: 2px solid #a855f7 !important;
+  padding-left: 0.75rem !important;
 }
 
-.nextra-sidebar a.active:hover,
-.nextra-sidebar-container a.active:hover,
-.nx-text-primary-600[aria-current="page"]:hover,
-.nx-font-medium[aria-current="page"]:hover,
-a[aria-current="page"]:hover,
-li a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600:hover,
-a.nx-font-medium.nx-text-primary-600:hover,
-a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors.nx-text-primary-600:hover,
-.nx-text-primary-600:hover,
-nav a.nx-flex.nx-gap-1.nx-py-1:hover {
-  background-color: rgba(168, 85, 247, 0.3) !important;
+/* Also highlight current page links */
+a[aria-current="page"],
+.nx-text-primary-600[aria-current="page"],
+li a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600,
+.nx-text-primary-600:not(.nextra-content .nx-text-primary-600) {
+  background-color: rgba(168, 85, 247, 0.2) !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  border-left: 2px solid #a855f7 !important;
+  padding-left: 0.75rem !important;
 }
 
-/* Only apply text color for non-active items */
-li:not(.active) > a:not(.active) > .nx-text-primary-600,
-li:not(.active) > a:not(.active) > .nx-text-primary-700,
-li:not(.active) > a:not(.active) > .nx-text-primary-800,
-span:not(.active) > .nx-text-primary-600 {
-  color: #e4e4e7 !important;
+/* Reset other selectors that might cause double highlighting */
+.nx-text-primary-600:not(.nextra-content .nx-text-primary-600),
+nav li a.nx-text-primary-600,
+a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors.nx-text-primary-600 {
+  background-color: rgba(168, 85, 247, 0.2) !important;
+  border-left: 2px solid #a855f7 !important;
 }
 
-/* Standard link styling for content - single definition */
-.nextra-content a {
+/* Links in content area should have standard styling */
+.nextra-content a,
+.nextra-content .nx-text-primary-600 {
   color: #a855f7 !important;
   text-decoration: underline !important;
-}
-
-.nextra-content a:hover {
-  color: #c084fc !important;
-  text-decoration: underline !important;
-}
-
-/* Remove any conflicting link styles */
-.nextra-content a strong, 
-.nextra-content strong a,
-.nextra-content a b,
-.nextra-content b a,
-.nextra-content a em,
-.nextra-content em a,
-.nextra-content a code,
-.nextra-content code a {
-  color: #a855f7 !important;
-  text-decoration: underline !important;
-}
-
-/* Make sure main content links don't get the navigation styling */
-main .nextra-content a,
-article a,
-.nextra-content .nx-text-primary-600,
-.nextra-content a.nx-text-primary-600 {
   background-color: transparent !important;
   border-left: none !important;
   padding-left: 0 !important;
-  color: #a855f7 !important;
-  text-decoration: underline !important;
   font-weight: normal !important;
-}
-
-main .nextra-content a:hover,
-article a:hover,
-.nextra-content .nx-text-primary-600:hover,
-.nextra-content a.nx-text-primary-600:hover {
-  color: #c084fc !important;
-  background-color: transparent !important;
-  border-left: none !important;
-}
-
-/* Tables - improved readability */
-.nextra-content table {
-  border-color: #2a2a2a !important;
-  border-collapse: collapse !important;
-  width: 100% !important;
-  margin: 1.5rem 0 !important;
-}
-
-.nextra-content th {
-  background-color: #151515 !important;
-  color: #ffffff !important; /* Brighter text for headers */
-  border-color: #2a2a2a !important;
-  font-weight: 600 !important;
-  padding: 0.75rem 1rem !important;
-  text-align: left !important;
-}
-
-.nextra-content td {
-  background-color: #000 !important;
-  color: #ffffff !important; /* Much brighter text for better readability */
-  border-color: #2a2a2a !important;
-  padding: 0.75rem 1rem !important;
-  font-weight: 400 !important;
-}
-
-/* Table row hover effect */
-.nextra-content tr:hover td {
-  background-color: #0a0a0a !important;
-}
-
-/* Alternating row colors for better readability */
-.nextra-content tr:nth-child(even) td {
-  background-color: #050505 !important;
-}
-
-.nextra-content tr:nth-child(even):hover td {
-  background-color: #0a0a0a !important;
-}
-
-/* Force table text to be bright */
-table td, 
-.nextra-content table td, 
-.nextra-content tbody td, 
-.dark .nextra-content table td {
-  color: #ffffff !important;
-}
-
-/* Better bullet points spacing - more aggressive */
-.nextra-content ul li, 
-.nextra-content ol li {
-  margin-bottom: 0.25rem !important; /* Further reduced from 0.4rem */
-  line-height: 1.4 !important; /* Further reduced from 1.5 */
-  position: relative !important;
-}
-
-.nextra-content ul {
-  margin-top: 0.4rem !important;
-  margin-bottom: 0.4rem !important;
-}
-
-/* Adjust bullet point position */
-.nextra-content ul li::before {
-  margin-left: -1.3em !important;
-  margin-right: 0.4em !important;
-}
-
-/* More compact lists */
-.nextra-content ol,
-.nextra-content ul {
-  padding-left: 1.5rem !important;
-}
-
-/* Enhanced active item in sidebar navigation */
-.nextra-sidebar a.active,
-.nextra-sidebar-container a.active,
-.nx-text-primary-600[aria-current="page"],
-.nx-font-medium[aria-current="page"],
-a[aria-current="page"],
-li a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600,
-.nextra-menu-desktop li > a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors,
-a.nx-font-medium.nx-text-primary-600,
-a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors.nx-text-primary-600,
-li.nx-mt-1 > a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600,
-aside a.nx-text-primary-600,
-.nx-text-primary-600:not(.nextra-content .nx-text-primary-600),
-nav a.nx-flex.nx-gap-1.nx-py-1 {
-  background-color: rgba(168, 85, 247, 0.2) !important;
-  color: #ffffff !important;
-  font-weight: 500 !important;
-  border-left: 2px solid #a855f7 !important;
-}
-
-.nextra-sidebar a.active:hover,
-.nextra-sidebar-container a.active:hover,
-.nx-text-primary-600[aria-current="page"]:hover,
-.nx-font-medium[aria-current="page"]:hover,
-a[aria-current="page"]:hover,
-li a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600:hover,
-a.nx-font-medium.nx-text-primary-600:hover,
-a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors.nx-text-primary-600:hover,
-.nx-text-primary-600:hover,
-nav a.nx-flex.nx-gap-1.nx-py-1:hover {
-  background-color: rgba(168, 85, 247, 0.3) !important;
-}
-
-/* Only apply text color for non-active items */
-li:not(.active) > a:not(.active) > .nx-text-primary-600,
-li:not(.active) > a:not(.active) > .nx-text-primary-700,
-li:not(.active) > a:not(.active) > .nx-text-primary-800,
-span:not(.active) > .nx-text-primary-600 {
-  color: #e4e4e7 !important;
-}
-
-/* Standard link styling for content - single definition */
-.nextra-content a {
-  color: #a855f7 !important;
-  text-decoration: underline !important;
-}
-
-.nextra-content a:hover {
-  color: #c084fc !important;
-  text-decoration: underline !important;
-}
-
-/* Remove any conflicting link styles */
-.nextra-content a strong, 
-.nextra-content strong a,
-.nextra-content a b,
-.nextra-content b a,
-.nextra-content a em,
-.nextra-content em a,
-.nextra-content a code,
-.nextra-content code a {
-  color: #a855f7 !important;
-  text-decoration: underline !important;
-}
-
-/* Make sure main content links don't get the navigation styling */
-main .nextra-content a,
-article a,
-.nextra-content .nx-text-primary-600,
-.nextra-content a.nx-text-primary-600 {
-  background-color: transparent !important;
-  border-left: none !important;
-  padding-left: 0 !important;
-  color: #a855f7 !important;
-  text-decoration: underline !important;
-  font-weight: normal !important;
-}
-
-main .nextra-content a:hover,
-article a:hover,
-.nextra-content .nx-text-primary-600:hover,
-.nextra-content a.nx-text-primary-600:hover {
-  color: #c084fc !important;
-  background-color: transparent !important;
-  border-left: none !important;
-}
-
-/* Tables - improved readability */
-.nextra-content table {
-  border-color: #2a2a2a !important;
-  border-collapse: collapse !important;
-  width: 100% !important;
-  margin: 1.5rem 0 !important;
-}
-
-.nextra-content th {
-  background-color: #151515 !important;
-  color: #ffffff !important; /* Brighter text for headers */
-  border-color: #2a2a2a !important;
-  font-weight: 600 !important;
-  padding: 0.75rem 1rem !important;
-  text-align: left !important;
-}
-
-.nextra-content td {
-  background-color: #000 !important;
-  color: #ffffff !important; /* Much brighter text for better readability */
-  border-color: #2a2a2a !important;
-  padding: 0.75rem 1rem !important;
-  font-weight: 400 !important;
-}
-
-/* Table row hover effect */
-.nextra-content tr:hover td {
-  background-color: #0a0a0a !important;
-}
-
-/* Alternating row colors for better readability */
-.nextra-content tr:nth-child(even) td {
-  background-color: #050505 !important;
-}
-
-.nextra-content tr:nth-child(even):hover td {
-  background-color: #0a0a0a !important;
-}
-
-/* Force table text to be bright */
-table td, 
-.nextra-content table td, 
-.nextra-content tbody td, 
-.dark .nextra-content table td {
-  color: #ffffff !important;
-}
-
-/* Better bullet points spacing - more aggressive */
-.nextra-content ul li, 
-.nextra-content ol li {
-  margin-bottom: 0.25rem !important; /* Further reduced from 0.4rem */
-  line-height: 1.4 !important; /* Further reduced from 1.5 */
-  position: relative !important;
-}
-
-.nextra-content ul {
-  margin-top: 0.4rem !important;
-  margin-bottom: 0.4rem !important;
-}
-
-/* Adjust bullet point position */
-.nextra-content ul li::before {
-  margin-left: -1.3em !important;
-  margin-right: 0.4em !important;
-}
-
-/* More compact lists */
-.nextra-content ol,
-.nextra-content ul {
-  padding-left: 1.5rem !important;
-}
-
-/* Enhanced active item in sidebar navigation */
-.nextra-sidebar a.active,
-.nextra-sidebar-container a.active,
-.nx-text-primary-600[aria-current="page"],
-.nx-font-medium[aria-current="page"],
-a[aria-current="page"],
-li a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600,
-.nextra-menu-desktop li > a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors,
-a.nx-font-medium.nx-text-primary-600,
-a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors.nx-text-primary-600,
-li.nx-mt-1 > a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600,
-aside a.nx-text-primary-600,
-.nx-text-primary-600:not(.nextra-content .nx-text-primary-600),
-nav a.nx-flex.nx-gap-1.nx-py-1 {
-  background-color: rgba(168, 85, 247, 0.2) !important;
-  color: #ffffff !important;
-  font-weight: 500 !important;
-  border-left: 2px solid #a855f7 !important;
-}
-
-.nextra-sidebar a.active:hover,
-.nextra-sidebar-container a.active:hover,
-.nx-text-primary-600[aria-current="page"]:hover,
-.nx-font-medium[aria-current="page"]:hover,
-a[aria-current="page"]:hover,
-li a.nx-flex.nx-gap-1.nx-py-1.nx-text-primary-600:hover,
-a.nx-font-medium.nx-text-primary-600:hover,
-a.nx-flex.nx-gap-1.nx-py-1.nx-transition-colors.nx-text-primary-600:hover,
-.nx-text-primary-600:hover,
-nav a.nx-flex.nx-gap-1.nx-py-1:hover {
-  background-color: rgba(168, 85, 247, 0.3) !important;
-}
-
-/* Only apply text color for non-active items */
-li:not(.active) > a:not(.active) > .nx-text-primary-600,
-li:not(.active) > a:not(.active) > .nx-text-primary-700,
-li:not(.active) > a:not(.active) > .nx-text-primary-800,
-span:not(.active) > .nx-text-primary-600 {
-  color: #e4e4e7 !important;
-}
-
-/* Standard link styling for content - single definition */
-.nextra-content a {
-  color: #a855f7 !important;
-  text-decoration: underline !important;
-}
-
-.nextra-content a:hover {
-  color: #c084fc !important;
-  text-decoration: underline !important;
 }
 
 /* Remove any conflicting link styles */

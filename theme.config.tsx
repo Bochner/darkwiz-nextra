@@ -432,7 +432,7 @@ const config: DocsThemeConfig = {
     defaultMenuCollapseLevel: 1,
     titleComponent: ({ title, type }) => {
       return <div className="text-zinc-300 hover:text-zinc-100 transition-colors">{title}</div>
-    },
+    }
   },
   toc: {
     float: true,
@@ -441,7 +441,12 @@ const config: DocsThemeConfig = {
   search: {
     placeholder: 'Search documentation...',
   },
-  direction: 'ltr'
+  direction: 'ltr',
+  navigation: {
+    next: true,
+    prev: true
+  },
+  gitTimestamp: null
 }
 
 export default config

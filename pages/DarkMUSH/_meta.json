@@ -1,0 +1,13 @@
+{
+  "*": {
+    "theme": {
+      "breadcrumb": true,
+      "toc": true,
+      "pagination": true
+    }
+  },
+  "index": "Overview",
+  "affectswindow": "Affects Window",
+  "asciimapwindow": "ASCII Map Window",
+  "groupwindow": "Group Window"
+} 

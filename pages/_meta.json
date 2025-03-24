@@ -1,14 +1,15 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "index": {
+    "title": "Introduction"
+  },
+  "races": "Races",
+  "Help": "Help Documentation",
+  "DarkMUSH": "DarkMUSH Client",
   "about": {
-    "title": "About",
-    "type": "page"
+    "title": "About"
   },
   "contact": {
     "title": "Contact ↗",
-    "type": "page",
     "href": "https://twitter.com/shuding_",
     "newWindow": true
   }
