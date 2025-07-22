@@ -1,0 +1,412 @@
+/* Override Nextra's default styling with black background and #303030 accents */
+
+/* Main background and text colors */
+html, body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
+  
+  /* Navigation bar */
+  .nextra-nav-container {
+    background-color: #000000 !important;
+    border-bottom: 1px solid #303030 !important;
+  }
+  
+  /* Sidebar */
+  .nextra-sidebar {
+    background-color: #000000 !important;
+    border-right: 1px solid #303030 !important;
+  }
+  
+  .nextra-sidebar-container,
+  .nextra-scrollbar {
+    background-color: #000000 !important;
+  }
+  
+  /* Menu items */
+  .nx-text-primary-600 {
+    color: #ffffff !important;
+  }
+  
+  .nx-text-gray-500,
+  .nx-text-gray-600 {
+    color: #aaaaaa !important;
+  }
+  
+  /* Active/hover states */
+  .nx-bg-primary-100,
+  .nx-bg-primary-50 {
+    background-color: #303030 !important;
+  }
+  
+  /* Links */
+  a {
+    color: #aaaaaa !important;
+  }
+  
+  a:hover {
+    color: #ffffff !important;
+  }
+  
+  /* Code blocks */
+  .nextra-code-block {
+    background-color: #101010 !important;
+    border: 1px solid #303030 !important;
+  }
+  
+  /* Table of contents */
+  .nextra-toc {
+    background-color: #000000 !important;
+  }
+  
+  /* Cards */
+  .nextra-card {
+    background-color: #101010 !important;
+    border: 1px solid #303030 !important;
+  }
+  
+  .nextra-card:hover {
+    border-color: #505050 !important;
+  }
+  
+  /* Search */
+  .nextra-search {
+    background-color: #000000 !important;
+  }
+  
+  .nextra-search input {
+    background-color: #101010 !important;
+    border: 1px solid #303030 !important;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #101010 !important;
+    border: 1px solid #303030 !important;
+  }
+  
+  button:hover {
+    background-color: #202020 !important;
+    border-color: #404040 !important;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #000000 !important;
+    border-top: 1px solid #303030 !important;
+  }
+  
+  /* Dropdown menus */
+  .nextra-dropdown-menu {
+    background-color: #101010 !important;
+    border: 1px solid #303030 !important;
+  }
+  
+  /* Tabs */
+  .nextra-tabs {
+    background-color: #000000 !important;
+  }
+  
+  .nextra-tab {
+    background-color: #101010 !important;
+    border: 1px solid #303030 !important;
+  }
+  
+  .nextra-tab[data-selected] {
+    background-color: #303030 !important;
+  }
+  
+  /* Callouts */
+  .nextra-callout {
+    background-color: #101010 !important;
+    border-left: 3px solid #303030 !important;
+  }
+  
+  /* Tables */
+  table {
+    background-color: #101010 !important;
+    border: 1px solid #303030 !important;
+  }
+  
+  th, td {
+    border: 1px solid #303030 !important;
+  }
+  
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #303030;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #404040;
+  }
+  
+  /* Dark mode toggle */
+  .nx-bg-gray-100 {
+    background-color: #101010 !important;
+  }
+  
+  /* Force dark mode */
+  html {
+    color-scheme: dark !important;
+  }
+  
+  /* Additional Nextra-specific selectors */
+  .nx-bg-white {
+    background-color: #000000 !important;
+  }
+  
+  .nx-border-gray-200 {
+    border-color: #303030 !important;
+  }
+  
+  .nx-shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  /* MUD color classes */
+  .color-red { color: red; }
+  .color-red-bold { color: red; font-weight: bold; }
+  .color-green { color: green; }
+  .color-green-bold { color: green; font-weight: bold; }
+  .color-yellow { color: yellow; }
+  .color-yellow-bold { color: yellow; font-weight: bold; }
+  .color-blue { color: blue; }
+  .color-blue-bold { color: blue; font-weight: bold; }
+  .color-magenta { color: magenta; }
+  .color-magenta-bold { color: magenta; font-weight: bold; }
+  .color-cyan { color: cyan; }
+  .color-cyan-bold { color: cyan; font-weight: bold; }
+  .color-white { color: white; }
+  .color-white-bold { color: white; font-weight: bold; }
+  .color-dark-gray { color: darkgray; }
+  .color-reset { color: inherit; font-weight: normal; }
+
+  /* Race card styles - similar to game sites like mudvault */
+  .race-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid #303030;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .race-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-color: #505050;
+  }
+
+  .race-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .race-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #404040;
+    flex-shrink: 0;
+  }
+
+  .race-title {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #ffffff;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .race-card {
+      padding: 1rem;
+    }
+    
+    .race-header {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+    
+    .race-image {
+      width: 70px;
+      height: 70px;
+    }
+    
+    .race-title {
+      font-size: 1.75rem;
+    }
+  }
+
+  /* Race overview page styles */
+  .race-overview-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .race-overview-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 6px;
+    vertical-align: middle;
+  }
+
+  @media (max-width: 640px) {
+    .race-overview-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  /* Race stat cards */
+  .race-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .race-stat-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #303030;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .race-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-color: #505050;
+  }
+
+  /* New desktop layout - image left, content right */
+  .race-stat-card-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media (min-width: 769px) {
+    .race-stat-card-layout {
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 1.5rem !important;
+    }
+
+    .race-stat-card-left {
+      flex: 0 0 40% !important;
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem !important;
+    }
+
+    .race-stat-card-right {
+      flex: 1 !important;
+      min-width: 0;
+    }
+  }
+
+  /* Mobile layout - keep original stacked layout */
+  .race-stat-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .race-stat-card-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #404040;
+    flex-shrink: 0;
+  }
+
+  .race-stat-card-title {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .race-stat-card-abilities {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #cccccc;
+  }
+
+  .race-stat-card-stats {
+    background: #0f0f0f;
+    border-radius: 6px;
+    padding: 0.75rem;
+    border: 1px solid #202020;
+  }
+
+  .race-stat-card-stats table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+
+  .race-stat-card-stats th,
+  .race-stat-card-stats td {
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+    border: 1px solid #303030 !important;
+    background: transparent !important;
+  }
+
+  .race-stat-card-stats th {
+    background: #262626 !important;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+
+  /* Mobile responsive for cards */
+  @media (max-width: 768px) {
+    .race-cards-container {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .race-stat-card {
+      padding: 1rem;
+    }
+    
+    .race-stat-card-header {
+      gap: 0.75rem;
+    }
+    
+    .race-stat-card-image {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .race-stat-card-title {
+      font-size: 1.5rem;
+    }
+  }
